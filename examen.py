@@ -5,18 +5,15 @@
 def get_list(nombre_fichero):
     nombre = nombre_fichero
     f = open (nombre, "rt", encoding="utf-8")
-    vacio == false
-
+    vacio = True
+    for linea in f:
+        print(linea)
+        vacio = False
     
+    if vacio == True:
+        raise ValueError("Fichero vacio")
 
-
-    linea = f.readline()
-
-
-    if linea == "":
-        raise ValueError("Linea")
-    else:
-        print ("lleno")
+    return 0
     
 
 
